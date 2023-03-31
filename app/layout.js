@@ -1,25 +1,21 @@
-import Header from './components/Header'
-import './globals.css'
-import Providers from './Providers'
-
+import Header from "./components/Header";
+import "./globals.css";
+import Providers from "./Providers";
 
 export const metadata = {
-  title: 'IMDb Movies',
-  description: 'IMDB movie clone git',
-  
-}
+  title: "IMDb Movies",
+  description: "IMDB movie clone git",
+};
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
       <body>
         <Providers>
-
-        <Header/>
-        {children}
+          <Header />
+          {children}
         </Providers>
-        </body>
+      </body>
     </html>
-  )
+  );
 }
