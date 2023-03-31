@@ -2,7 +2,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'IMDb Movies',
-  description: 'IMDB movie clone',
+  description: 'IMDB movie clonegit ',
 }
 
 export default function RootLayout({ children }) {
