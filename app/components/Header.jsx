@@ -1,15 +1,16 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { AiFillHome } from "react-icons/ai";
+import { AiFillHome, AiFillStar, AiFillThunderbolt } from "react-icons/ai";
 import { BsFillInfoCircleFill } from "react-icons/bs";
 import DarkModeSwitch from "./DarkModeSwitch";
 import MenuItem from "./MenuItem";
+import SearchBox from "./SearchBox";
 
 export default function Header() {
   return (
-    <div className="dark:bg-gray-600 drop-shadow-xl bg-amber-100">
-      <div className="flex max-w-6xl sm:mx-auto items-center py-6 justify-between">
+    <div className="dark:bg-gray-600 drop-shadow-xl bg-amber-100 flex sm:flex-row flex-col">
+      <div className="flex max-w-6xl sm:mx-auto items-center py-3 justify-between mx-4 grow">
         {/* logo */}
         <Link href="/">
           <h2 className="text-2xl">
@@ -20,19 +21,23 @@ export default function Header() {
           </h2>
         </Link>
 
+        <div className="hidden sm:inline">
+          <SearchBox />
+        </div>
+
         {/* nav items */}
         <div className="flex items-center">
           <MenuItem title="HOME" address="/" Icon={AiFillHome} param="/" />
           <MenuItem
             title="TRENDING"
             address="/?genre=fetchTrending"
-            Icon={AiFillHome}
+            Icon={AiFillThunderbolt}
             param="fetchTrending"
           />
           <MenuItem
             title="TOP RATED"
             address="/?genre=fetchTopRated"
-            Icon={AiFillHome}
+            Icon={AiFillStar}
             param="fetchTopRated"
           />
           <MenuItem
@@ -43,6 +48,10 @@ export default function Header() {
           />
           <DarkModeSwitch />
         </div>
+      </div>
+
+      <div className="sm:hidden">
+        <SearchBox />
       </div>
     </div>
   );
