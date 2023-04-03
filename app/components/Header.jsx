@@ -9,7 +9,7 @@ import SearchBox from "./SearchBox";
 
 export default function Header() {
   return (
-    <div className="dark:bg-gray-600 drop-shadow-xl bg-amber-100 flex sm:flex-row flex-col">
+    <div className="dark:bg-gray-600 drop-shadow-xl bg-amber-100 flex sm:flex-row flex-col px-5">
       <div className="flex max-w-6xl sm:mx-auto items-center py-3 justify-between mx-4 grow">
         {/* logo */}
         <Link href="/">

@@ -10,8 +10,8 @@ export default function SearchBox() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!search) return;
-    console.log(search);
     router.push(`/search/${search}`);
+    setSearch("");
   };
 
   return (
